@@ -38,3 +38,13 @@ plt.title('Distribuzione dei Petali')
 plt.legend()
 
 plt.show()
+
+#------------------------------------------------------------
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)
+# train_test_split divide il dataset in due parti, una per il training e una per il test
+# test_size corrisponde a "Ratio of training to test data" su playground.tensorflow.org
+# random_state è il seed per la generazione di numeri casuali, sarebbe il tasto 'generate' su playground.tensorflow.org
+#------------------------------------------------------------
+# Perché se si aumenta il test_size l'errore si avvicina di più a zero? Perché si sta allenando il modello su più dati
+# Allora cosa cambia da 'batch size' a 'test size'? Il batch size è il numero di esempi che vengono passati al modello in una volta sola
